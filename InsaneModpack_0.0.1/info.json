@@ -16,6 +16,7 @@
     "Nanobots",
     "qol_research",
     "ruvotis-modpack >= 0.0.1",
+    "MSP_for_1.1 >= 0.1.15",
     "? multiplayer_extreme_modpack >= 1.1",
     "? exploration_extreme_modpack >= 1.1.6",
     "? 5dim_complete >= 0.0.1"
