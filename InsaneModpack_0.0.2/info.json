@@ -1,6 +1,6 @@
 {
   "name": "InsaneModpack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "A modpack with too many mods",
   "author": "Zaphodgame",
   "email": "",
@@ -17,8 +17,7 @@
     "qol_research",
     "ruvotis-modpack >= 0.0.1",
     "MoreSciencePacks-for1_1 >= 0.1.15",
-    "? multiplayer_extreme_modpack >= 1.1",
-    "? exploration_extreme_modpack >= 1.1.6",
-    "? 5dim_complete >= 0.0.1"
+    "multiplayer_extreme_modpack >= 1.1",
+    "5dim_complete >= 0.0.1"
   ]
 }
