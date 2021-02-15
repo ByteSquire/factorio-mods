@@ -54,7 +54,7 @@ require("prototypes.technology.technology-modded")
 				if settings.startup["moresciencepack-debugLogging"].value == true then log("debug Lab: " .. tostring(data.raw.lab[labX].name) .. " is not blacklisted. Adding MSP packs now...") end 
 				--if a pack we add hasn't already been added to a lab by some other means or by another mod, such as creative-mode-mod, we'll go ahead and add the pack now.
 				for i=1,30 do
-					if(data.raw.lab[labX].inputs != nil) -- Check if lab has inputs
+					if data.raw.lab[labX].inputs ~= nil then -- Check if lab has inputs
 						if not morescience.tech.is_in_table("more-science-pack-" .. i, data.raw.lab[labX].inputs) then 
 							table.insert(data.raw.lab[labX].inputs, "more-science-pack-" .. i)				
 							--ADD valid inputs rather then explicitly redefine inputs. this should prevent issues with labs having other custom-science packs removed due to explicit declaration.

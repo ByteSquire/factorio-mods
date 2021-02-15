@@ -39,9 +39,9 @@ function morescience.tech.add_science_pack_range(techList, first, last, amount)
 				end
 			end
 		else --technology does not exist. print to log, and if setting is enabled, immediately terminate game.
-			log("Technology " .. techList[technology] .. " does not exist. Failed to insert MoreSciencePacks.") --prints regardless of setting chosen for debugLogging. As this is a true error. Debate whether to use:
+			log("Technology " .. techList[technology] .. " does not exist. Failed to insert MoreSciencePacks-for1_1.") --prints regardless of setting chosen for debugLogging. As this is a true error. Debate whether to use:
 			if settings.startup["moresciencepack-ErrorOnFail"].value == true then
-				error("Technology " .. techList[technology] .. " does not exist. Failed to insert MoreSciencePacks. Game will now close because startup.setting:ErrorOnFail is enabled.")
+				error("Technology " .. techList[technology] .. " does not exist. Failed to insert MoreSciencePacks-for1_1. Game will now close because startup.setting:ErrorOnFail is enabled.")
 			end 
 		end	
 	end
@@ -79,9 +79,9 @@ function morescience.tech.add_science_pack_array(techList, scienceArray, amount)
 				end
 				
 			else --technology does not exist. print to log, and if ErrorOnFail setting is enabled, terminate game.
-				log("Technology " .. techList[technology] .. " does not exist. Failed to insert MoreSciencePacks.") --prints regardless of setting chosen for debugLogging. As this is a true error. Debate whether to use:
+				log("Technology " .. techList[technology] .. " does not exist. Failed to insert MoreSciencePacks-for1_1.") --prints regardless of setting chosen for debugLogging. As this is a true error. Debate whether to use:
 				if settings.startup["moresciencepack-ErrorOnFail"].value == true then
-					error("Technology " .. techList[technology] .. " does not exist. Failed to insert MoreSciencePacks. Game will now close because startup.setting:ErrorOnFail is enabled.")
+					error("Technology " .. techList[technology] .. " does not exist. Failed to insert MoreSciencePacks-for1_1. Game will now close because startup.setting:ErrorOnFail is enabled.")
 				end 
 			
 			end
@@ -107,9 +107,9 @@ function morescience.tech.add_science_pack_array(techList, scienceArray, amount)
 			end
 				
 		else --technology does not exist. print to log, and if ErrorOnFail setting is enabled, terminate game.
-				log("Technology " .. tostring(data.raw.technology[techList]) .. " does not exist. Failed to insert MoreSciencePacks.") --prints regardless of setting chosen for debugLogging. As this is a true error. Debate whether to use:
+				log("Technology " .. tostring(data.raw.technology[techList]) .. " does not exist. Failed to insert MoreSciencePacks-for1_1.") --prints regardless of setting chosen for debugLogging. As this is a true error. Debate whether to use:
 				if settings.startup["moresciencepack-ErrorOnFail"].value == true then
-					--error("Technology " .. tostring(data.raw.technology[techList]) .. " does not exist. Failed to insert MoreSciencePacks. Game will now close because startup.setting:ErrorOnFail is enabled.")
+					--error("Technology " .. tostring(data.raw.technology[techList]) .. " does not exist. Failed to insert MoreSciencePacks-for1_1. Game will now close because startup.setting:ErrorOnFail is enabled.")
 				end 			
 		end		
 	end 

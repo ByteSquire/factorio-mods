@@ -50,7 +50,7 @@ if mods["AllAboutMoney"]	then
 					{
 					type = "recipe",
 					name = "buy-MSPpack"..i,
-					icon = "__MoreSciencePacks__/graphics/icons/more-science-pack-"..i..".png",
+					icon = "__MoreSciencePacks-for1_1__/graphics/icons/more-science-pack-"..i..".png",
 					icon_size = 32,
 					order = refOrder[tostring(i)], 
 					enabled = true,

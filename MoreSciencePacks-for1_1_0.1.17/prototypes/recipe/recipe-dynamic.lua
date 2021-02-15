@@ -131,7 +131,7 @@ if mods["omnilib"] and settings.startup["moresciencepack-Omni-Ignored"].value ==
 								linearOutput(maxval, startval)
 					end
 						
-						RecChain:create("MoreSciencePacks",item):
+						RecChain:create("MoreSciencePacks-for1_1",item):
 						setLocName("recipe-name.more-science-pack",{"item-name."..item}, function(levels,grade) return grade end):
 						setTechLocName("more-science-pack",{"item-name."..item}):	
 						--setTechLocDesc("more-science-pack",{"item-name."..item}, function(levels,grade) return grade end):	
@@ -142,7 +142,7 @@ if mods["omnilib"] and settings.startup["moresciencepack-Omni-Ignored"].value ==
 						setTechCost(function(levels,grade) return (9+(i+hardval))*grade*diffCostMultiplier end): --ifSetTechCost does not exist. 
 						setTechPacks(function(levels,grade) return math.floor(grade*4/morescience.levels)+1 end):
 						--setTechPacks(function(levels,grade) return math.floor(grade/morescience.levels*2)+1 end):									
-						setTechIcon("MoreSciencePacks", item):	--setTechIcon("__MoreSciencePacks__/graphics/technology/"..item..".png"):
+						setTechIcon("MoreSciencePacks-for1_1", item):	--setTechIcon("__MoreSciencePacks-for1_1__/graphics/technology/"..item..".png"):
 						setTechPrereq(function(levels,grade)
 							local req = {}
 							if grade == 1 then
