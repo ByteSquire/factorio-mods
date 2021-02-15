@@ -1,5 +1,5 @@
 {
-  "name": "MoreSciencePacks",
+  "name": "MoreSciencePacks-for1_1",
   "version": "0.1.15",
   "title": "MSP - 30 new Science Packs",
   "author": "DellAquila, usafphoenix, (Zaphodgame for 1.1)",
@@ -8,7 +8,7 @@
   "description": "Play with 30 new science packs and a new technology tree (if omniLib enabled) that adds efficiency tech to the various science packs. This mod is not an extension to lovely_santa's mod by a similar name. It adds 30 science packs but they are all pretty inexpensive. A TON of customization exists for the mod and individual packs can be disabled or have their output levels tweaked. Mod integration engine designed to add pack types to entire tech tree (only applies to technology that can be traced back to vanilla tech). Optional inclusion of omniLib enables new tech tree that unlocks various levels of efficiency tiers for each pack that will auto-update machines when research completes.",
   "dependencies": [
     "base >= 1.1",
-	"z-Chems-MSP-Softlock-Fix >= 1.1.0",
+    "z-Chems-MSP-Softlock-Fix >= 1.1.0",
     "? omnilib >= 3.0.9",
     "? omnimatter >= 3.0.1",
     "? omnimatter_crystal >= 3.0.0",
