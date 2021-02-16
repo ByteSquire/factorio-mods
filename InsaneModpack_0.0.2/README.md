@@ -1,3 +1,0 @@
-# InsaneModpack
-
-A modpack for a fun experience...
