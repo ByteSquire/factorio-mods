@@ -30,7 +30,7 @@ if legacyMode then --if either the legacyMode config is set to true or if omnili
 
 	--Add recipe unlocks for sciece packs. Use: morescience.tech.add_recipe_unlock(technology, recipe)
 	morescience.tech.add_recipe_unlock("optics", "more-science-pack-2") 
-	morescience.tech.add_recipe_unlock("gun-turret", "more-science-pack-3") 
+	morescience.tech.add_recipe_unlock("stone-wall", "more-science-pack-3") 
 	morescience.tech.add_recipe_unlock("electronics", "more-science-pack-4") 
 	morescience.tech.add_recipe_unlock("automation-2", "more-science-pack-5") 
 	morescience.tech.add_recipe_unlock("advanced-material-processing", "more-science-pack-6") 
