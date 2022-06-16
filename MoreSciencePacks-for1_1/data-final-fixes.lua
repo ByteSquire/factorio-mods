@@ -149,9 +149,77 @@ end
 				end 					
 			end				
 		end
-				
 
 
+-- SeaBlock mod compatability: reactivate missing science packs and ingredients deactivated by SeaBlock.
+-- see: https://github.com/KiwiHawk/SeaBlock/blob/0abf142ff4bcf1c83c9551d384798071a8a88269/SeaBlock/data-updates/military.lua
+if mods["SeaBlock"] then
+    -- science pack 2 and its ingredients:
+    morescience.tech.add_recipe_unlock("optics", "more-science-pack-2")
+    data.raw.recipe["more-science-pack-2"].hidden = false;
+    bobmods.lib.recipe.replace_ingredient("more-science-pack-2", "burner-mining-drill", "burner-ore-crusher")
 
+    -- science pack 6:
+    morescience.tech.add_recipe_unlock("advanced-material-processing", "more-science-pack-6")
+    data.raw.recipe["more-science-pack-6"].hidden = false;
+
+    -- science pack 13 and its ingredients:
+    morescience.tech.add_recipe_unlock("flammables", "more-science-pack-13")
+    morescience.tech.add_recipe_unlock("flammables", "flamethrower")
+    data.raw.recipe["flamethrower"].hidden = false;
+    morescience.tech.add_recipe_unlock("flammables", "flamethrower-ammo")
+    data.raw.recipe["flamethrower-ammo"].hidden = false;
+
+    -- science pack 16 and its ingredient:
+    morescience.tech.add_recipe_unlock("logistic-robotics", "more-science-pack-16")
+    morescience.tech.add_recipe_unlock("logistic-robotics", "defender-capsule")
+    data.raw.recipe["defender-capsule"].hidden = false;
+
+    -- ingredients for science pack 27:
+    morescience.tech.add_recipe_unlock("military-2", "combat-shotgun")
+    data.raw.recipe["combat-shotgun"].hidden = false;
+    morescience.tech.add_recipe_unlock("rocketry", "explosive-rocket")
+    data.raw.recipe["explosive-rocket"].hidden = false;
+
+
+    -- remove science pack 1 from red science tech and its prerequisites (those techs should not require any science packs in SeaBlock):
+    morescience.tech.remove_recipe_from_tech_and_its_prerequisites("sct-automation-science-pack", "more-science-pack-1")
+    -- make sure that packs 2 to 4 are possible to unlock:
+    morescience.tech.remove_recipe_from_tech_and_its_prerequisites(morescience.tech.get_tech_of_recipe("more-science-pack-2"), "more-science-pack-2")
+    morescience.tech.remove_recipe_from_tech_and_its_prerequisites(morescience.tech.get_tech_of_recipe("more-science-pack-3"), "more-science-pack-3")
+    morescience.tech.remove_recipe_from_tech_and_its_prerequisites(morescience.tech.get_tech_of_recipe("more-science-pack-4"), "more-science-pack-4")
+    morescience.tech.remove_recipe_from_tech_and_its_prerequisites(morescience.tech.get_tech_of_recipe("more-science-pack-5"), "more-science-pack-5")
+end
+
+
+-- Angels Refining: make possible to craft "more-science-pack-1" at beginning of the game.
+-- Because normal copper ore or iron ore are possible to get only when "Mechanical Refining" is researched (which requires science packs 1,2,3)
+if mods["angelsrefining"]
+    and data.raw.item["copper-ore"].subgroup == "angels-copper"
+    and data.raw.item["iron-ore"].subgroup == "angels-iron"
+    and
+        (
+            -- saphirite is possible to be crafted at start of game? :
+            (data.raw.recipe["angelsore1-crushed"] ~= nil and data.raw.recipe["angelsore1-crushed"].enabled == true)
+            or (data.raw.recipe["angelsore1-crushed-hand"] ~= nil and data.raw.recipe["angelsore1-crushed-hand"].enabled == true)
+        )
+    and
+        (
+            -- stiratite is possible to be crafted at start of game? :
+            (data.raw.recipe["angelsore3-crushed"] ~= nil and data.raw.recipe["angelsore3-crushed"].enabled == true)
+            or (data.raw.recipe["angelsore3-crushed-hand"] ~= nil and data.raw.recipe["angelsore3-crushed-hand"].enabled == true)
+        )
+then
+    local sciencePack1AngelsAlternate = table.deepcopy(data.raw.recipe["more-science-pack-1"])
+
+    sciencePack1AngelsAlternate.name = "more-science-pack-1-angels-alternate"
+    sciencePack1AngelsAlternate.ingredients = {
+        {"angels-ore3-crushed", 3},
+        {"angels-ore1-crushed", 3}
+    }
+    sciencePack1AngelsAlternate.localised_name = {"item-name.more-science-pack-1-angels-alternate"}
+
+    data:extend({sciencePack1AngelsAlternate})
+end
 
 

@@ -540,3 +540,26 @@ function morescience.tech.module_limitation(recipe)
 end
 
 
+
+function morescience.tech.get_tech_of_recipe(recipe)
+	for i, tech in pairs(data.raw.technology) do
+		if tech.effects then
+			for j, effect in pairs(tech.effects) do
+				if effect.type == "unlock-recipe" and effect.recipe == recipe then
+					return tech.name
+				end
+			end
+		end
+	end
+	return true
+end
+
+function morescience.tech.remove_recipe_from_tech_and_its_prerequisites(tech_name, recipe_name)
+    morescience.tech.remove_science_pack(tech_name, recipe_name)
+
+    if type(data.raw.technology[tech_name].prerequisites) == "table" then
+        for _,req in pairs(data.raw.technology[tech_name].prerequisites) do
+            morescience.tech.remove_recipe_from_tech_and_its_prerequisites(req, recipe_name)
+        end
+    end
+end
