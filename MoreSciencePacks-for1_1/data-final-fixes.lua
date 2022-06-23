@@ -162,6 +162,7 @@ if mods["SeaBlock"] then
     -- science pack 6:
     morescience.tech.add_recipe_unlock("advanced-material-processing", "more-science-pack-6")
     data.raw.recipe["more-science-pack-6"].hidden = false;
+    bobmods.lib.recipe.replace_ingredient("more-science-pack-6", "coal", "wood-charcoal")
 
     -- science pack 13 and its ingredients:
     morescience.tech.add_recipe_unlock("flammables", "more-science-pack-13")
