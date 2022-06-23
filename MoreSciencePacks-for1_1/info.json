@@ -1,8 +1,8 @@
 {
   "name": "MoreSciencePacks-for1_1",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "title": "MSP - 30 new Science Packs",
-  "author": "DellAquila, usafphoenix, (Zaphodgame for 1.1), domis86",
+  "author": "DellAquila, usafphoenix, (Zaphodgame, domis86 for 1.1)",
   "factorio_version": "1.1",
   "homepage": "https://github.com/ByteSquire/factorio-mods/tree/main/MSP_for_1.1",
   "description": "--DISCLAIMER: I did not create this mod, I just increased the factorio version and added a fix mod--\nPlay with 30 new science packs and a new technology tree (if omniLib enabled) that adds efficiency tech to the various science packs. This mod is not an extension to lovely_santa's mod by a similar name. It adds 30 science packs but they are all pretty inexpensive. A TON of customization exists for the mod and individual packs can be disabled or have their output levels tweaked. Mod integration engine designed to add pack types to entire tech tree (only applies to technology that can be traced back to vanilla tech). Optional inclusion of omniLib enables new tech tree that unlocks various levels of efficiency tiers for each pack that will auto-update machines when research completes.",
