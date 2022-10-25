@@ -41,8 +41,8 @@ require("prototypes.technology.technology-modded")
 	local blacklistLabs ={"creative-mode-fix_creative-lab", "lab-module"}
 
 	
-	
-	if mods["MomoTweak"] and mods["angelspetrochem"] and settings.startup["moresciencepack-no-lab-slots"].value == true and settings.startup["moresciencepack-GameProgressionFix"].value == true then 
+
+	if (mods["MomoTweak"] or mods["MomosTweak"]) and mods["angelspetrochem"] and settings.startup["moresciencepack-no-lab-slots"].value == true and settings.startup["moresciencepack-GameProgressionFix"].value == true then
 	--if all above = true, skip addition of packs to science labs.
 			--[[ IF all the above ascertions are true, prevent addition of msp packs as lab tools. packs will act as intermediates only in this configuration. 
 			This feature added for players who don't want the logistic hassle of inserting 37 science packs into labs, but are okay with very complex science crafting recipes. 
