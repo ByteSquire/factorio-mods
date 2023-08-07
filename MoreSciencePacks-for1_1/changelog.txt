@@ -80,7 +80,7 @@ Date: 05. 23. 2019
 Version: 0.1.10
 Date: 04. 19. 2019
   Changes:
-    - Added config option to disable Vanilla packs for researches containing MSP pack 1. Retains mod-compatability by selectively removing vanilla packs only from researches that have had MSP pack-1 added. Reduces overall cost of research. Tested against angels mods to ensure proper handling. Startup option is disabled by default.  
+    - Added config option to disable Vanilla packs for researches containing MSP pack 1. Retains mod-compatibility by selectively removing vanilla packs only from researches that have had MSP pack-1 added. Reduces overall cost of research. Tested against angels mods to ensure proper handling. Startup option is disabled by default.  
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.09
 Date: 03. 09. 2019
@@ -100,7 +100,7 @@ Date: 03. 29. 2019
 Version: 0.1.06
 Date: 03. 25. 2019
   Changes:
-    - Added BigLab compatability. Suggest using this mod in combination with MSP as it reduces the logistical headache of inserting so many packs into a single lab slightly. 
+    - Added BigLab compatibility. Suggest using this mod in combination with MSP as it reduces the logistical headache of inserting so many packs into a single lab slightly. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.05
 Date: 03. 16. 2019
@@ -184,7 +184,7 @@ Version: 0.0.31
     - Corrected "conditional require" of dynamic-recipes.lua if omniLib was detected. This corrects issue with CRC checks in multiplayer. dynamic-recipes.lua now set to always required, but does nothing if omniLib isn't present.
     - Changed title of mod from "More Science Packs - 30 new science packs" to "MSP - 30 new science packs", hopefully this reduces the number of new users thinking the mod is somehow connected to lovely_Santa's mod by a similar name ("more science"). We'll see...
     - removed more science from info.json
-    - Reverted incompatability flag for more science mod after further testing; While I maintain it is still ill-advised to run too many "science-overhaul" mods concurrently, MSP and lovely_santa's mod should not directly interfere with game function, although there are combinations of various mods that, when combined with both WILL cause issues. 
+    - Reverted incompatibility flag for more science mod after further testing; While I maintain it is still ill-advised to run too many "science-overhaul" mods concurrently, MSP and lovely_santa's mod should not directly interfere with game function, although there are combinations of various mods that, when combined with both WILL cause issues. 
     - Removed some unused code. 
     - changed default for startup-config "reset-recipe-unlocks" to false. As this is a "fix" method that only solves a few scenarios and creates just as many scenarios with problems as the few it corrects, this option will remain available, but will be disabled by default. The function was written to attempt to reset pack-ingredient recipe unlock locations to their vanilla setting...the assumed location by MSP that they'd be located under. This does not resolve issues where both the tech-progression and recipe of the ingredient were both changed, so in most cases these scenarios will likely need to be treated individually on a case by case basis. There is no "fix all" that can resolve every possible scenario/combination of mods changing the tech-progression lines. Previous attempts to resolve a method of dynamically allocating/buidling recipes from a list of potential ingredients based on what mods have altered recipes was unsuccessful....to my shame. 
     - Corrected movement of blue-inserter recipe_unlock from logistics 3 into logistics-1 even when reset-recipe-unlocks is disabled. 
@@ -192,9 +192,9 @@ Version: 0.0.31
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.30
   Changes:
-    - new config option for players wanting to play with MSP, omni mods and MomoTweaks but can't because the changes made to MSP that utilize omniLib break momoTweaks+MSP compatability. This function unfortunately tells MSP to ignore the presence of omniLib and the mod acts as it did a few iterations back before omniLib features were added. Option disabled by default. Hopefully momosundaes can get mt and omni working along with MSP but in the meantime, this will give players an option to play with all three. 
+    - new config option for players wanting to play with MSP, omni mods and MomoTweaks but can't because the changes made to MSP that utilize omniLib break momoTweaks+MSP compatibility. This function unfortunately tells MSP to ignore the presence of omniLib and the mod acts as it did a few iterations back before omniLib features were added. Option disabled by default. Hopefully momosundaes can get mt and omni working along with MSP but in the meantime, this will give players an option to play with all three. 
     - minor tweak to order of some code in data-final-fixes should fix a rather odd error that occured sporadically in some scenarios.
-    - incompatability flag set to lovely_santa's morescience mod. this is not strictly necessary, and can be edited out, but how else to clarify the mods aren't extensions of each other? 
+    - incompatibility flag set to lovely_santa's morescience mod. this is not strictly necessary, and can be edited out, but how else to clarify the mods aren't extensions of each other? 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.29
   Changes:
@@ -239,7 +239,7 @@ Version: 0.0.23
     - bound all instances of morescience.tech.reset_recipe_unlock to a startup-settings option (default to true as it fixes various problems). For the most part, this should only correct issues that occur when a mod creates a technology for a vanilla item that should be unlocked from the start, or moves an item used as a pack-ingredient and locks it behind a later-game technology (causing a cyclic-redundancy). This function can be disabled if it causes problems, though.
     - small tweak in functions.lua to make certain bits slightly more time-efficient (inserted logical steps/comparisons to prevent unnecessary scans of a tech tree when it wasn't necessary)
     - Disabling an individual pack from technology requirements will no longer set the recipe output to 'nil'. It will craft the default output * the multiplier but will not be a cost associated with completing research.
-    - recent changes may improve compatability with several other mods previously unsupported, but this has not been validated or confirmed yet. Specific packs can still be disabled from research requirements
+    - recent changes may improve compatibility with several other mods previously unsupported, but this has not been validated or confirmed yet. Specific packs can still be disabled from research requirements
     - more small corrections to settings.lua and locale file.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.22
@@ -282,7 +282,7 @@ Version: 0.0.16
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.15
   Changes:
-    - Added "EconomicsIntegration" option in startup settings, which integrates with "AllAboutMoney" mod by DellAquila. Option is disabled by default as it is mostly pretty cheaty. Purchase science packs with coins, however, it comes at a cost: recipes are less efficient than their basic counterpart. This provides another method for completing research without disabling a conflicting mod, waiting for MSP to release a compatability fix, or disabling a specific MSP pack altogether (by setting result count to 0). Options are nice...
+    - Added "EconomicsIntegration" option in startup settings, which integrates with "AllAboutMoney" mod by DellAquila. Option is disabled by default as it is mostly pretty cheaty. Purchase science packs with coins, however, it comes at a cost: recipes are less efficient than their basic counterpart. This provides another method for completing research without disabling a conflicting mod, waiting for MSP to release a compatibility fix, or disabling a specific MSP pack altogether (by setting result count to 0). Options are nice...
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.14
   Changes:
@@ -300,7 +300,7 @@ Version: 0.0.12
   Changes:
     - Integration engine is once again enabled by default. Most issues with it have been resolved, and for those situations that arise that aren't resolved, an additional option in startup settings has been added for such times where game progression breaks as a result of specific mod arrangements causing the game to be stuck in a impossible-to-progress state. 
     - Corrected info.json dependency data.
-    - Logistics 2 technology no longer requires MSP 9,10 in the event that omniScience is active. Re-establishes compatability with omni mods.
+    - Logistics 2 technology no longer requires MSP 9,10 in the event that omniScience is active. Re-establishes compatibility with omni mods.
     - Added disable option to entire mod (as mentioned above) in startup config for situations where game progression is impossible due to mod-conflict (and I am unable to provide a timely fix). This will not erase recipes or items from the game but simply remove the requirement for MSP packs from technology that can't be researched. Essentially a cheat. Enable this to temporarily resolve cyclic-dependency issues that prevent game progression. Note that MSP packs are not necessarily unlocked in numerical order, but this option is now available to "resolve" situations that may arise that legitimately make the game impossible simply due to the way mods can sometimes interact unexpectedly (or unknowingly). 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.11
@@ -315,8 +315,8 @@ Version: 0.0.11
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.10
   Bugfixes:
-    - Fixed compatability with omnimatter by setting optional dependency flag within info.json. Resolves error: "attempt to index field '?' (a nil value)". Other mods having this issue should first be tested after adding a similarly-written optional dependency-flag to info.json.
-    - Fixed compatability with dark matter replicators by changing how we search for labs and add science packs to them. This change replaces the explicit declaration method previously used, with a more-dynamic one that will search for any and all labs not blacklisted by the function and add MSP packs to them. This was an important change that will help enable future updates and compatability with other mods in future. 
+    - Fixed compatibility with omnimatter by setting optional dependency flag within info.json. Resolves error: "attempt to index field '?' (a nil value)". Other mods having this issue should first be tested after adding a similarly-written optional dependency-flag to info.json.
+    - Fixed compatibility with dark matter replicators by changing how we search for labs and add science packs to them. This change replaces the explicit declaration method previously used, with a more-dynamic one that will search for any and all labs not blacklisted by the function and add MSP packs to them. This was an important change that will help enable future updates and compatibility with other mods in future. 
   Changes:
     - A few config setting changes
 ---------------------------------------------------------------------------------------------------
